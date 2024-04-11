@@ -6,17 +6,17 @@ window.initPosts = async () => {
   while (array.indexOf(null) > -1) {
     array.shift();
   }
-  loadPosts(array) 
+  loadPosts(array)
 };
 
-window.defaultUserImg = 
+window.defaultUserImg =
   "https://storage.googleapis.com/replit/images/1688760349013_89f12ffa5f1e586893c422f10b5d80ba.png";
 
 // loads all posts in
 initPosts();
 
 // sets the title!
-document.title =  "Home / Memblu";
+document.title = "Home / Memblu";
 
 // the function to grab all posts from the API and load them in.
 
@@ -32,7 +32,7 @@ function loadPosts(posts) {
   // <span id="newPostUsername">${decideUserUsername()}</span>
   // <div id="newPostArea" contenteditable placeholder="Type for free cookie 🍪"></div>
   // </div><button class="newPostButton">Post</button></div></div>`;
-  
+
   // check if the JSON is stringified
   if (typeof posts == "string") {
     posts = JSON.parse(posts)
@@ -47,7 +47,7 @@ function loadPosts(posts) {
     const lastPostFooter = document.createElement("p");
 
     lastPostFooter.innerText = "Welp, you've reached the end! (For now..)";
-    
+
     if (posts.length == index) {
       pageHolder.append(lastPostFooter);
     }
@@ -57,7 +57,7 @@ function loadPosts(posts) {
 var GoogleLogo = `<div class="glog"><span id="GoogleG"><span style="color: #4285F4;">G</span><span style="color: #DB4437;">o</span><span style="color: #F4B400;">o</span><span style="color: #4285F4;">g</span><span style="color: #0F9D58;">l</span><span style="color: #DB4437;">e</span></span></div>`
 
 function loginWithExotek() {
-  const webmodal = webModal("https://exotek.co/login?client_id=64cd495c5e5d4fb36411c588&redirect_uri=https%3A%2F%2F{url}&response_type=code&scope=userinfo&state=OPTIONAL", "Login with Exotek".replace("{url}", window.location.domain.replace("https://", "").replace("http://", "")), "1500", "1500");
+  const webmodal = webModal("https://exotek.co/login?client_id=64cd495c5e5d4fb36411c588&redirect_uri=https%3A%2F%2F{url}&response_type=code&scope=userinfo&state=OPTIONAL", ("Login with Exotek").replace("{url}", window.location.domain.replace("https://", "").replace("http://", "")), "1500", "1500");
 
   window.loginWin = webmodal;
 }
@@ -86,11 +86,11 @@ setTimeout(() => {
         access_token: userInfo.access_token
       }
       const body = encodeBody(post);
-      const response = await simpleReq("posts/new",{
+      const response = await simpleReq("posts/new", {
         method: "POST",
-          headers: {
-            "Content-Type": "application/x-www-form-urlencoded"
-          },
+        headers: {
+          "Content-Type": "application/x-www-form-urlencoded"
+        },
         body: body
       })
       if (response.status == 200) {
@@ -98,14 +98,14 @@ setTimeout(() => {
       } else {
         const res = JSON.parse(response.responseText);
 
-        showPopUp("Error", res.message + "<br><br>" + res.error, [[ "Okay", "var(--themeColor)" ]]);
+        showPopUp("Error", res.message + "<br><br>" + res.error, [["Okay", "var(--themeColor)"]]);
       }
 
-  });
+    });
 }, 2500)
 
 a = 0;
-socket.subscribe({task:"newPost"},function(){
+socket.subscribe({ task: "newPost" }, function() {
   document.getElementById("newPosts").style.display = ""
   document.getElementById("newPosts").addEventListener("click", () => {
     if (a < 1) {
