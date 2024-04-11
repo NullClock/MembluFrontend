@@ -1,0 +1,441 @@
+/* 
+
+EVERYTIME THIS CODE IS MODIFIED, PLEASE PUT IT THROUGH https://autoprefixer.github.io/
+THIS IS REQUIRED. DO NOT IGNORE.
+
+CSS TODO:
+ * Yay, no work to do! (yet..)
+
+*/
+
+
+@import url('https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@700&display=swap');
+
+:root {
+  --bgColor: #000619;
+  --fontColor: #ffffff;
+  --mainFont: 'IBM Plex Sans';
+  --logoFont: 'Poppins';
+  --contentColor1: #000c33;
+  --contentColor2: #000e3d;
+  --contentColor3: #001e80;
+  --contentColor4: #3363ff;
+  --themeColor: #0093ff;
+  --grayColor: #5c5c5c;
+}
+
+html {
+  height: 100%;
+  width: 100%;
+  background-color: var(--bgColor);
+  color: var(--fontColor);
+  font-family: var(--mainFont)
+}
+
+.center {
+  text-align: center;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.app {
+  overflow: hidden;
+  margin: auto;
+  /* scale: 110%; Why?*/
+  margin-top: 25px;
+  align-items: center;
+}
+
+.sidebar {
+    position: sticky;
+    display: flex;
+    width: 200px;
+    height: 65px;
+    background: var(--bgColor);
+    color: var(--themeColor);
+    font-size: 20px;
+    font-family: var(--mainFont);
+    font-weight: 700;
+}
+
+.sidebarSection {
+    padding: 6px;
+    margin-bottom: 8px;
+    font-size: 20px;
+    line-height: 20px;
+    background: var(--contentColor1);
+    border-radius: 12px;
+    width: 180px;
+    display: flex;
+    flex: align-items;
+}
+
+#buttons {
+  background: rgba(255, 255, 255, 0);
+}
+
+/* button {
+  transition:all .2s ease-in-out;
+} */
+
+.sidebarButton {
+  display: flex;
+  padding: 6px;
+  margin-right: 5px;
+  align-items: center;
+  width: 100%;
+  border-radius: 8px;
+  line-height: 10px;
+  font-family: var(--mainFont);
+  background: var(--contentColor1);
+  color: var(--contentColor4);
+  border: none;
+  font-weight: 600;
+  font-size: 20px;
+  text-align: left;
+  cursor: pointer;
+  margin-bottom: 6px;
+}
+
+button {
+  padding: 6px;
+  margin-right: 5px;
+  align-items: center;
+  width: auto;
+  border-radius: 8px;
+  font-family: var(--mainFont);
+  background: var(--contentColor1);
+  color: var(--contentColor4);
+  border: none;
+  font-weight: 600;
+  font-size: 20px;
+  cursor: pointer;
+  margin-bottom: 6px;
+}
+
+button.exotekmanage {
+  padding: 6px;
+  margin-right: 5px;
+  align-items: center;
+  width: auto;
+  border-radius: 8px;
+  font-family: var(--mainFont);
+  background: #d63eca;
+  color: #000000;
+  border: none;
+  font-weight: 600;
+  font-size: 20px;
+  cursor: pointer;
+  margin-bottom: 6px;
+}
+
+.logo {
+  font-size: 36px;
+  font-weight: 700;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  font-family: var(--logoFont);
+}
+
+.pageHolder {
+  width: fit-content;
+  padding: auto;
+}
+
+button:active {
+  transform:scale(.95)
+}
+
+button:hover {
+  filter: brightness(110%);
+}
+
+.sidebarButtonImg {
+  width: 30px;
+  height: 30px;
+  margin-right: 8px;
+}
+
+#buttons {
+  padding-bottom: 0;
+}
+
+.newPost {
+    display: flex;
+    padding: 6px;
+    margin-bottom: 8px;
+    font-size: 20px;
+    line-height: 20px;
+    background: var(--contentColor1);
+    border-radius: 12px;
+    width: 655px;
+    height: 200px;
+}
+
+.postBox {
+    display: flex;
+    padding: 6px;
+    margin-bottom: 8px;
+    font-size: 20px;
+    line-height: 20px;
+    background: var(--contentColor1);
+    border-radius: 12px;
+    width: 655px;
+    height: calc(content-height + 25px);
+}
+
+#newPostUserPfp {
+    width: 45px;
+    height: 45px;
+    border-radius: 16px;
+    object-fit: cover;
+    padding: 10px;
+}
+
+#newPostUsername {
+   font-size: 20px;
+}
+
+#newPostArea {
+    border-radius: 8px;
+    background: var(--contentColor2);
+    padding: 8px;
+    margin-top: 4px;
+    height: 60px;
+    width: 90%;
+    word-wrap: break-word;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+.newPostSectionContent {
+    flex: 1;
+    padding-left: 6px;
+    overflow: hidden;
+    margin-top: 16px;
+}
+
+#newPostArea:empty:before {
+    content: attr(placeholder);
+    cursor: text;
+    color: #999;
+}
+.profile {
+    color: var(--fontColor);
+    border-style: solid;
+    border-color: var(--contentColor3);
+    border-radius: 10px;
+    border-width: 10px;
+    background-color: var(--contentColor3);
+}
+.newPostButton {
+  margin-left: auto;
+  border: none;
+  border-radius: 8px;
+  line-height: 20px;
+  height: 45px;
+  width: 65px;
+  margin-top: auto;
+  background-color: var(--themeColor);
+  font-family: var(--mainFont);
+  color: var(--fontColor);
+  font-weight: 700;
+  font-size: 25px;
+}
+
+.postText {
+  font-size: 15px;
+}
+
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--contentColor3);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--themeColor);
+  transition:all .2s ease-in-out;
+  border-radius:99px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  opacity:0.6;
+}
+
+select {
+  background: var(--contentColor3);
+  border: none;
+  border-radius: 4px;
+  color: var(--fontColor);
+  font-family: var(--mainFont);
+}
+
+.settingsBox {
+    padding: 6px;
+    margin-bottom: 8px;
+    font-size: 20px;
+    line-height: 20px;
+    background: var(--contentColor1);
+    border-radius: 12px;
+    width: fit-content;
+}
+
+.settingsBox * {
+  display: inline;
+}
+
+input[type="color"] {
+  background: none;
+  cursor: pointer;
+  height: 2.5em;
+  width: 2.5em;
+  align-items: center;
+  border: none;
+}
+
+::placeholder { color: var(--contentColor4); opacity: 1; }
+
+::-ms-input-placeholder { /* Internet Explorer 10-11 */
+  color: var(--contentColor4);
+}
+
+.modalBackBlur {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  backdrop-filter: blur(10px);
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  opacity: 0;
+  transition: opacity 0.2s;
+}
+
+.modal {
+  padding:8px;
+  background:var(--contentColor1);
+  border:2px solid var(--contentColor2);
+  border-radius:12px;
+  width:350px;
+  max-height:calc(100% - 32px);
+  overflow-y:auto;
+  transform:scale(.9);
+  transition:transform .2s;
+}
+
+.closeModal {
+  position:absolute;
+  display:flex;
+  width:24px;
+  height:24px;
+  right:4px;
+  top:4px;
+  background:rgba(0,0,0,.45);
+  border-radius:100%;
+  justify-content:center;
+  align-items:center;
+  cursor:pointer;
+  font-size:22px;
+  line-height:22px;
+  transition:.1s;
+  font-weight:400;
+  color:#fff;
+}
+
+.modalTitle {
+  font-weight:700;
+  font-size:30px;
+}
+
+.modalContent {
+  font-size:15px;
+}
+
+.modalButtons {
+  margin-top:8px;
+  text-align:right;
+}
+
+.modalButton {
+  margin-left:4px;
+  border-radius:8px;
+  margin-top:4px;
+  line-height:unset;
+  color:white;
+}
+
+input {
+  background-color: var(--contentColor3);
+  border: none;
+  border-radius: 8px;
+  color: white;
+  font-family: var(--mainFont);
+  font-size: 15px;
+}
+
+input:focus {
+  outline: none;
+}
+
+input::placeholder {
+  color: var(--contentColor4);
+}
+
+#GoogleG {
+  font-size: 20px;
+  font-family: "Outfit", sans-serif;
+}
+
+/* ::-webkit-scrollbar {
+    width: 6px;
+    z-index: 99;
+}
+
+::-webkit-scrollbar-thumb {
+    min-height: 10px;
+    border-radius: 10px;
+    background-color: var(--contentColor3);
+    z-index: 100;
+}
+
+::-webkit-scrollbar-track {
+    border-radius: 10px;
+    background-color: var(--fontColor);
+}
+
+::-webkit-scrollbar {
+    width: 6px;
+}
+
+::-webkit-scrollbar-thumb {
+    border: 6px solid transparent;
+    background-clip: padding-box;
+    min-height: 10px;
+    border-radius: 10px;
+    background-color: var(--contentColor3);
+}
+
+::-webkit-scrollbar-corner {
+    background: 0 0 0;
+} */
+
+
+
+
+/* 
+
+EVERYTIME THIS CODE IS MODIFIED, PLEASE PUT IT THROUGH https://autoprefixer.github.io/
+THIS IS REQUIRED. DO NOT IGNORE.
+
+*/

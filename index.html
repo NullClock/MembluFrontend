@@ -1,0 +1,112 @@
+<!-- 
+
+Hello, and welcome to Memblu!
+
+People in charge here:
+ - Mixxer (ZIGM)
+ - SiriFromPhotop
+ - heomlaem
+
+TODO:
+ - Make the backend,
+ - add more comments :skull:
+
+NOTES:
+ - To open a new tab with a link that is in a comment or the code, hold ctrl and click the link.
+ - This is hosting at: https://chat.memblu.live
+ - If you don't know what Exotek is; Check out https://app.photop.live.
+ - This project is purely for fun; You will not be paid for this.
+ - Please do not use any type of profanity in the code.
+
+You can add notes and stuff to the TODO if you want.
+You may have been invited to a REPL named "MembluBootpad", that is the launchpage for Memblu. It is hosted at https://memblu.live
+
+-->
+
+
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="google-site-verification" content="o0INnDrryz9STQVZNkkN7StXWmUEsOBDYVma3CQmtNw" />
+  <meta name="title" content="Memblu Social">
+  <meta name="description" content="Welcome to Memblu! Everyone is welcome to Memblu, whether you're a coder, an artist, or just anybody!">
+  <meta name="keywords" content="Memblu, Memblu Social, Social Media, memblu, memblu social, social media, chat, hangout, free">
+  <meta name="robots" content="index, follow">
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta name="language" content="English">
+  <meta name="revisit-after" content="1 days">
+  <meta name="author" content="XAPK Enterprises">
+  <meta name="viewport" content="width=device-width">
+  <title>Memblu</title>
+  <link href="style.css" rel="stylesheet" type="text/css" />
+  <link rel="icon" type="image/x-icon" href="/assets/LighterBlueFavicon.png" />
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+
+<body>
+  <div class="app" style="width: 850px;">
+    <div class="sidebar">
+      <div class="sidebarSection">
+        <p class="logo center"><span style="color: #ffffff;">Mem</span>blu</p>
+      </div>
+      <div class="sidebarSection" id="buttons">
+        <button class="sidebarButton">
+          <p>Home</p>
+        </button>
+        <button class="sidebarButton">
+          <p>Profile</p>
+        </button>
+        <button class="sidebarButton">
+          <p>Community</p>
+        </button>
+        <button class="sidebarButton">
+          <p>Settings</p>
+        </button>
+        <button class="sidebarButton">
+          <p>Info</p>
+        </button>
+      </div>
+    </div>
+    <div class="pageHolder">
+      
+    </div>
+    <div id="eventTarget"></div>
+  </div>
+  <script src="/crucial.js"></script>
+  <script async>
+    const registerServiceWorker = async () => {
+      if ("serviceWorker" in navigator) {
+        try {
+          const registration = await navigator.serviceWorker.register("/sw.js", {
+            scope: "/",
+          });
+          if (registration.installing) {
+            console.log("Service worker installing");
+          } else if (registration.waiting) {
+            console.log("Service worker installed");
+          } else if (registration.active) {
+            console.log("Service worker active");
+          }
+        } catch (error) {
+          console.error(`Registration failed with ${error}`);
+        }
+      }
+    };
+
+    registerServiceWorker();
+  </script>
+  <script src='https://drkm.chickeng1ttrdev.repl.co/drkm.js'></script>
+  <!--Above is a JS theme toggle library-->
+</body>
+<!--you need to use wireframe.js for pages-->
+<!--? it is used for the buttons and stuff to load the pages-->
+<!--that means i would have to use javascript no you just need to edit the string that 's for wireframe.profile for example-->
+<!--???? i have no idea what any of that means well just make the html and I'll do it k-->
+
+</html>
+
+

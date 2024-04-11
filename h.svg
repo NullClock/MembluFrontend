@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 233.78 85.1">
+  <defs>
+    <style>
+      .cls-1, .cls-2 {
+        fill: none;
+        isolation: isolate;
+      }
+
+      .cls-2 {
+        font-family: HelveticaNeue-UltraLightItalic, 'Helvetica Neue';
+        font-size: 72px;
+        font-style: italic;
+        font-weight: 100;
+      }
+    </style>
+  </defs>
+  <g class="cls-1">
+    <text class="cls-2" transform="translate(.43 61.7)"><tspan x="0" y="0">Memblu</tspan></text>
+  </g>
+</svg>
