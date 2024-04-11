@@ -57,7 +57,7 @@ function loadPosts(posts) {
 var GoogleLogo = `<div class="glog"><span id="GoogleG"><span style="color: #4285F4;">G</span><span style="color: #DB4437;">o</span><span style="color: #F4B400;">o</span><span style="color: #4285F4;">g</span><span style="color: #0F9D58;">l</span><span style="color: #DB4437;">e</span></span></div>`
 
 function loginWithExotek() {
-  const webmodal = webModal("https://exotek.co/login?client_id=64cd495c5e5d4fb36411c588&redirect_uri=https%3A%2F%2F139f730d-8f9b-46f8-a070-c04b462dd0ea-00-1tjqhqw7eosn7.spock.replit.dev&response_type=code&scope=userinfo&state=OPTIONAL", "Login with Exotek", "1500", "1500");
+  const webmodal = webModal("https://exotek.co/login?client_id=64cd495c5e5d4fb36411c588&redirect_uri=https%3A%2F%2F{url}&response_type=code&scope=userinfo&state=OPTIONAL", "Login with Exotek".replace("{url}", window.location.domain.replace("https://", "").replace("http://", "")), "1500", "1500");
 
   window.loginWin = webmodal;
 }
