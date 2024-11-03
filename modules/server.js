@@ -1,7 +1,7 @@
 // apiResponse is the result of the apiReq function. Do not call the variable as "apiResponse" please use "apiResponse[0]"
 
 // the URL for the api.
-const api = "dragon.api.myxapk.tech";
+const api = "dragonapi.myxapk.tech";
 const pluginApi = "memblu-marketplace.memblu.repl.co"
 let apiResponse;
 let socket = new SimpleSocket({
@@ -92,6 +92,7 @@ function encodeBody(json) {
 }
 
 (() => {
+  // __R Identifier: Makes sure client version is adjacent to the Server
   const a = parseInt(localStorage.__R);
 
   superReq(`https://${api}/__r`, null, callback);
